@@ -180,6 +180,10 @@ body.dark {
   .headingTwoLines {
     margin-bottom: 0;
   }
+
+  .empty-answer {
+    margin-bottom: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 375px) {

@@ -141,7 +141,7 @@ const QuizPage = () => {
               </button>
             )}
             {choosenAnswer === "" && isAnswerGiven && (
-              <div className={styles.emptyAnswer}>
+              <div className="empty-answer">
                 <Image
                   src="/assets/images/icon-error.svg"
                   alt=""

@@ -30,7 +30,7 @@ const ResultPage = () => {
           <p className="body-s"></p>
         </div>
         <div className={styles.rightSide}>
-          <div className={styles.result}>
+          <div className="result">
             <div className={styles.header}>
               <div
                 style={{ backgroundColor: `#${bg}` }}
