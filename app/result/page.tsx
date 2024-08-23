@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const ResultPage = () => {
   const searchParams = useSearchParams();
@@ -14,12 +15,14 @@ const ResultPage = () => {
   console.log(bg);
   return (
     <>
-      <Header
-        title={quiz || ""}
-        image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
-        isVisible={true}
-        bgColor={`${bg}`}
-      />
+      <Suspense>
+        <Header
+          title={quiz || ""}
+          image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
+          isVisible={true}
+          bgColor={`${bg}`}
+        />
+      </Suspense>
       <main className="main">
         <div className="left-side">
           <h1 className="headingTwoLines">
