@@ -1,0 +1,25 @@
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.imageWrapper {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: #fff1e9;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper img {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.button span {
+  color: var(--dark-navy);
+}

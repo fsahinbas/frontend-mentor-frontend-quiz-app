@@ -1,0 +1,86 @@
+.optionWrapper {
+  width: 35.25rem;
+  background-color: var(--pure-white);
+  border: none;
+  outline: none;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.25rem;
+  gap: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--dark-navy);
+  border: 0.25rem solid var(--pure-white);
+}
+
+.optionWrapper:hover .optionTitle {
+  background-color: #f6e7ff;
+  transition: all 0.2s ease-in-out;
+}
+
+.optionWrapper.selected .optionTitle {
+  background-color: var(--purple);
+  color: var(--pure-white);
+  transition: all 0.2s ease-in-out;
+}
+
+.optionTitle {
+  text-transform: uppercase;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--light-bluish);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionBody {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.optionBody img {
+  margin-left: auto;
+}
+
+.optionWrapper.hasAnswered {
+  border: 0.25rem solid var(--purple);
+}
+
+.optionWrapper.hasAnswered > .optionTitle {
+  background-color: var(--purple);
+  color: var(--pure-white);
+}
+
+.optionWrapper.hasAnswered.correctAnswer {
+  border-color: var(--green);
+}
+
+.optionWrapper.hasAnswered.correctAnswer > .optionTitle {
+  background-color: var(--green);
+}
+
+.optionWrapper.hasAnswered.wrongAnswer {
+  border-color: var(--red);
+}
+
+.optionWrapper.hasAnswered.wrongAnswer > .optionTitle {
+  background-color: var(--red);
+}
+
+@media screen and (max-width: 768px) {
+  .optionWrapper {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .optionWrapper {
+    padding: 0.75rem;
+  }
+}
