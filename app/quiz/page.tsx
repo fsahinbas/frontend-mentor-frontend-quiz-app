@@ -83,7 +83,7 @@ const QuizPage = () => {
 
   return (
     { quiz } && (
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Header
           title={quiz.title}
           image={quiz.icon}
@@ -141,7 +141,7 @@ const QuizPage = () => {
               </button>
             )}
             {choosenAnswer === "" && isAnswerGiven && (
-              <div className="empty-answer">
+              <div className={styles.emptyAnswer}>
                 <Image
                   src="/assets/images/icon-error.svg"
                   alt=""

@@ -14,7 +14,7 @@ const ResultPage = () => {
 
   console.log(bg);
   return (
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <Header
         title={quiz || ""}
         image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
@@ -30,7 +30,7 @@ const ResultPage = () => {
           <p className="body-s"></p>
         </div>
         <div className={styles.rightSide}>
-          <div className="result">
+          <div className={styles.result}>
             <div className={styles.header}>
               <div
                 style={{ backgroundColor: `#${bg}` }}
