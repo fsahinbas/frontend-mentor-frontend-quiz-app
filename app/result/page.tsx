@@ -14,58 +14,54 @@ const ResultPage = () => {
 
   console.log(bg);
   return (
-    <>
-      <Suspense>
-        <Header
-          title={quiz || ""}
-          image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
-          isVisible={true}
-          bgColor={`${bg}`}
-        />
-      </Suspense>
-      <Suspense>
-        <main className="main">
-          <div className="left-side">
-            <h1 className="headingTwoLines">
-              <span className="heading-lg">Quiz completed</span>
-              <span className="heading-lg-bold">You scored...</span>
-            </h1>
-            <p className="body-s"></p>
-          </div>
-          <div className={styles.rightSide}>
-            <div className="result">
-              <div className={styles.header}>
-                <div
-                  style={{ backgroundColor: `#${bg}` }}
-                  className={styles.imageWrapper}
-                >
-                  <Image
-                    src={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
-                    height={40}
-                    width={40}
-                    alt=""
-                  />
-                </div>
-                <p className="heading-sm">{quiz}</p>
-              </div>
-
-              <p
-                className="heading-lg-bold"
-                style={{ color: "var(--dark-navy)" }}
+    <Suspense>
+      <Header
+        title={quiz || ""}
+        image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
+        isVisible={true}
+        bgColor={`${bg}`}
+      />
+      <main className="main">
+        <div className="left-side">
+          <h1 className="headingTwoLines">
+            <span className="heading-lg">Quiz completed</span>
+            <span className="heading-lg-bold">You scored...</span>
+          </h1>
+          <p className="body-s"></p>
+        </div>
+        <div className={styles.rightSide}>
+          <div className="result">
+            <div className={styles.header}>
+              <div
+                style={{ backgroundColor: `#${bg}` }}
+                className={styles.imageWrapper}
               >
-                {score}
-              </p>
-              <p className="body-m" style={{ color: "var(--grey-navy)" }}>
-                out of 10
-              </p>
+                <Image
+                  src={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
+                  height={40}
+                  width={40}
+                  alt=""
+                />
+              </div>
+              <p className="heading-sm">{quiz}</p>
             </div>
-            <button className={`${styles.btnSubmit} heading-sm`}>
-              <Link href={"/"}>Play Again</Link>
-            </button>
+
+            <p
+              className="heading-lg-bold"
+              style={{ color: "var(--dark-navy)" }}
+            >
+              {score}
+            </p>
+            <p className="body-m" style={{ color: "var(--grey-navy)" }}>
+              out of 10
+            </p>
           </div>
-        </main>
-      </Suspense>
-    </>
+          <button className={`${styles.btnSubmit} heading-sm`}>
+            <Link href={"/"}>Play Again</Link>
+          </button>
+        </div>
+      </main>
+    </Suspense>
   );
 };
 
