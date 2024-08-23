@@ -1,7 +1,7 @@
 "use client";
 import styles from "./page.module.css";
 import data from "@/data/data.json";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Option from "@/components/option/Option";
 import Image from "next/image";
@@ -83,7 +83,7 @@ const QuizPage = () => {
 
   return (
     { quiz } && (
-      <>
+      <Suspense>
         <Header
           title={quiz.title}
           image={quiz.icon}
@@ -153,7 +153,7 @@ const QuizPage = () => {
             )}
           </div>
         </main>
-      </>
+      </Suspense>
     )
   );
 };
