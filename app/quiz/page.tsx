@@ -83,7 +83,7 @@ const QuizPage = () => {
 
   return (
     { quiz } && (
-      <>
+      <Suspense fallback={<div>Loading...</div>}>
         <Header
           title={quiz.title}
           image={quiz.icon}
@@ -153,7 +153,7 @@ const QuizPage = () => {
             )}
           </div>
         </main>
-      </>
+      </Suspense>
     )
   );
 };
