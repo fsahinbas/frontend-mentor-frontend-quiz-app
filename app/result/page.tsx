@@ -14,7 +14,7 @@ const ResultPage = () => {
 
   console.log(bg);
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Header
         title={quiz || ""}
         image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
@@ -61,7 +61,7 @@ const ResultPage = () => {
           </button>
         </div>
       </main>
-    </Suspense>
+    </>
   );
 };
 
