@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
+import { Suspense } from "react";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rubik.className}>
-        <div className="container">{children}</div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <div className="container">{children}</div>
+        </Suspense>
       </body>
     </html>
   );

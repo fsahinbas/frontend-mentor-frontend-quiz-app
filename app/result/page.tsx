@@ -13,7 +13,7 @@ const ResultPage = () => {
   const bg = searchParams.get("bg");
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <>
       <Header
         title={quiz || ""}
         image={`/assets/images/icon-${quiz?.toLowerCase()}.svg`}
@@ -60,7 +60,7 @@ const ResultPage = () => {
           </button>
         </div>
       </main>
-    </Suspense>
+    </>
   );
 };
 
